@@ -1,0 +1,114 @@
+html {
+  background: #000;
+}
+
+body {
+  overflow: hidden;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.intro {
+  font-family: 'Orbitron', sans-serif;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  display: table;
+  width: 100%;
+}
+
+p.typer {
+  display: table;
+  text-align: center;
+  vertical-align: middle;
+  margin: 0 auto;
+  padding: 15% 0;
+  font-size: 3em;
+  line-height: 3em;
+  letter-spacing: .5em;
+  text-transform: uppercase;
+}
+
+i {
+  display: inline-block;
+  font-style: normal;
+  padding: 0 0.25em;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  transition: all 1s ease;
+}
+i.fly-in-out {
+  color: rgba(255, 255, 255, 0.9);
+  -webkit-animation: fly-in-out 4s infinite ease-in-out;
+  -moz-animation: fly-in-out 4s infinite ease-in-out;
+  animation: fly-in-out 4s infinite ease-in-out;
+}
+
+@-webkit-keyframes fly-in-out {
+  0% {
+    -webkit-transform: scaleY(-3) translate3d(0, -300%, 0);
+  }
+  15%, 45% {
+    color: rgba(255, 255, 255, 0.8);
+    -webkit-transform: scaleZ(1) translate3d(0, 10%, 0);
+  }
+  100% {
+    color: rgba(236, 243, 186, 0.2);
+    /* Come Closer */
+    /* Fade Up */
+    -webkit-transform: scale3d(9);
+  }
+}
+@-moz-keyframes fly-in-out {
+  0% {
+    -moz-transform: scaleY(-3) translate3d(0, -300%, 0);
+  }
+  15%, 45% {
+    color: rgba(255, 255, 255, 0.8);
+    -moz-transform: scaleZ(1) translate3d(0, 10%, 0);
+  }
+  100% {
+    color: rgba(236, 243, 186, 0.2);
+    /* Come Closer */
+    /* Fade Up */
+    -moz-transform: scale3d(9);
+  }
+}
+@keyframes fly-in-out {
+  0% {
+    -webkit-transform: scaleY(-3) translate3d(0, -300%, 0);
+    -moz-transform: scaleY(-3) translate3d(0, -300%, 0);
+    -ms-transform: scaleY(-3) translate3d(0, -300%, 0);
+    -o-transform: scaleY(-3) translate3d(0, -300%, 0);
+    transform: scaleY(-3) translate3d(0, -300%, 0);
+  }
+  15%, 45% {
+    color: rgba(255, 255, 255, 0.8);
+    -webkit-transform: scaleZ(1) translate3d(0, 10%, 0);
+    -moz-transform: scaleZ(1) translate3d(0, 10%, 0);
+    -ms-transform: scaleZ(1) translate3d(0, 10%, 0);
+    -o-transform: scaleZ(1) translate3d(0, 10%, 0);
+    transform: scaleZ(1) translate3d(0, 10%, 0);
+  }
+  100% {
+    color: rgba(236, 243, 186, 0.2);
+    /* Come Closer */
+    /* Fade Up */
+    -webkit-transform: scale3d(9);
+    -moz-transform: scale3d(9);
+    -ms-transform: scale3d(9);
+    -o-transform: scale3d(9);
+    transform: scale3d(9);
+  }
+}

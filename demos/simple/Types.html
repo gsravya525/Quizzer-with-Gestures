@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="author" content="Paul Hayes" />
+    <script src="./js/x.js"></script>
+    <script src="./js/y.js"></script>
+    <script src="http://www.html5canvastutorials.com/libraries/three.min.js"></script>
+    <link rel="stylesheet" href="css/cube.css" />
+
+      <link href='http://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+
+</head>
+<style>
+.experiment{
+    background: #687E5A;
+        overflow: hidden;
+
+     font-family: 'Orbitron', sans-serif;
+    }
+    
+    
+     .sp-circle-link {
+	position: absolute;
+	left: 50%;
+	bottom: 100px;
+	margin-left: -50px;
+	text-align: center;
+	line-height: 100px;
+	width: 100px;
+	height: 100px;
+	background: #fff;
+	color: #3f1616;
+	font-size: 25px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	-webkit-animation: fadeInRotate 1s linear 16s backwards;
+	-moz-animation: fadeInRotate 1s linear 16s backwards;
+	-ms-animation: fadeInRotate 1s linear 16s backwards;
+	animation: fadeInRotate 1s linear 16s backwards;
+	-webkit-transform: scale(1) rotate(0deg);
+	-moz-transform: scale(1) rotate(0deg);
+	-o-transform: scale(1) rotate(0deg);
+	-ms-transform: scale(1) rotate(0deg);
+	transform: scale(1) rotate(0deg);
+}
+.sp-circle-link:hover {
+	background: white;
+	color: #fff;
+}
+
+#font {
+margin-left:50%;
+font-size: 50px;
+}
+
+
+</style>
+<body class="experiment">
+
+ <p class="learn">
+        <font color="white" size="50px" align="center" > Select Genre to play </font><span><img src="http://www.apsu.com/wp-content/uploads/2013/01/blackboard_hand_chalk.png" height="100" width="100">
+</span>
+        </p>
+      
+<div id="experiment">
+
+<div class="containor">
+<div class='overall'>
+				<i class='head'></i>
+				<div class='body'>
+					<i class='middleBody'></i>
+					<i class='hand1'></i>
+					<i class='hand2'></i>
+				</div>
+				<i class='leg1'></i>
+				<i class='leg2'></i>
+			</div>
+			</div>
+    <div class="cube">
+        <div class="topFace"><div>
+            <img src="http://media.giphy.com/media/9xx7IW31zndzW/giphy.gif" width="100" height="100" >
+
+        </div></div>
+        <div class="leftFace">
+                    <a onclick="setCategory('javascript')" class="sp-circle-link" href="./js.html">Play</a>
+
+            <br/>
+            <br/>
+        </div>
+        <div class="rightFace">
+            <img src="http://www.ares-webdesign.de/images/page_javascript_512.png" height="150" width="150">
+
+        </div>
+    </div>
+    <div class="cube two">
+        <div class="topFace"><div>
+        
+        <img src="http://home.messiah.edu/~mf1234/html-code.gif" height="100" widht="100">
+        </div></div>
+        <div class="leftFace">
+                    <a onclick="setCategory('html')" class="sp-circle-link" href="./js.html">Play</a>
+
+        </div>
+        <div class="rightFace">
+<img src="http://png-3.findicons.com/files/icons/2420/coded/512/page_html.png" height="150" width="150">
+        </div>
+    </div>
+    
+    
+    <div class="cube three">
+        <div class="topFace"><div>
+<img src="http://media.giphy.com/media/A06UFEx8jxEwU/giphy.gif" height="100" width="100">
+
+        </div></div>
+        <div class="leftFace">
+         <a onclick="setCategory('SQL')" class="sp-circle-link" href="./js.html">Play</a>
+
+        </div>
+        <div class="rightFace">
+<img src="http://thinketg.com/wp-content/uploads/2014/09/sql.png" height="150" width="150">
+        </div>
+    </div>
+<div class="img">
+<img src="http://www.maxinescustomwebdesigns.com/images/image-of-animated-book-to-use.gif" height="150" width="150"></div>
+    </div>
+    </div>
+    </div>
+    </div>
+</body>
+<script>
+function setCategory(cat)
+			{
+			localStorage.setItem("category", cat);
+			}
+</script>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<!-- include js -->
+		<script src="../../src/gest.js"></script>
+		<script src="assets/plugins/jquery.min.js"></script>
+    <script src="assets/plugins/bootstrap/bootstrap.js"></script>
+    <script src="assets/plugins/background/jquery.background.min.js"></script>
+     <script src="assets/plugins/jquery.easing.1.3.js"></script>
+    <script src="assets/js/custom-slideshow.js"></script>
+	
+    <meta charset="utf-8">
+    
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="assets/plugins/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/plugins/font-awesome/font-awesome.min.css" rel="stylesheet" />
+    <link href="assets/plugins/vegas/jquery.background.min.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+        <link href="assets/css/note.css" rel="stylesheet" />
+
+
+	</head>
+<style type="text/css">
+body {
+    overflow:hidden;
+}
+</style>
+
+	<body>
+		<!-- diplay events on screen for DEMO purposes -->
+		<script type="text/javascript">
+			//create message container
+			var messageContainer = document.createElement('div');
+			messageContainer.className = 'gest-message';
+			document.body.appendChild(messageContainer);
+			
+			var styles = {
+				positioning: 'margin: 22% auto; min-width: 100px; max-width: 400px; width: 80%; padding: 15px;',
+				copy: 'font: normal 35px/1.1 \"Helvetica Neue\", Helvetica, Arial, sans-serif; color: #fff; font-size: 45px; text-align: center;',
+				general: 'display: block; background-color: #000; z-index: 100; border-radius: 10px;'
+			},
+				messageContainerStyle = styles.positioning + styles.copy + styles.general;
+	
+			gest.options.subscribeWithCallback(function(gesture) {
+				var message = '';
+			
+				if (gesture.direction) {
+					message = gesture.direction;
+					 if(message=="Up")
+					 alert("You selected A");
+					 if(message=="Right")
+					 alert("You selected D");
+					  if(message=="Down")
+					 alert("You selected C");
+					 if(message=="Left")
+					 alert("You selected B");
+					 
+					 
+					
+				} else {
+					message = gesture.error.message;
+					
+					
+				} 
+
+				messageContainer.innerHTML = '<p style=\"margin:0\">' + message + '</p>';
+				messageContainer.setAttribute('style', messageContainerStyle);
+
+				window.setTimeout(function() {
+					messageContainer.setAttribute('style', 'display: none;');
+				}, 3000);
+			});
+
+			gest.start();
+		</script>
+		
+		
+		<script src="../credits/credits.js"></script>
+	</body>
+
+
+<body>
+<header>
+</header>
+    <section class="left-panel">
+        <nav class="navigatation">
+            <div class="menu-text">
+                <h3>QUIZZER 
+
+                 </h3>
+            </div>
+            <a href="#home-section">START <img src="http://www.pragyan.org/12/home/events/brainwork/labyrinth/play/green%20button.png" height="30" width="30"</a>
+            <a href="#about-section"> STOP&nbsp;<img src="http://www.clker.com/cliparts/4/4/1/a/1195429270821624493molumen_multicolor_power_buttons_4.svg.hi.png" height="30" width="30"</a>
+            <a href="#services-section">SETTINGS <img src="http://png-4.findicons.com/files/icons/1055/aqua_gloss/128/settings1.png" height="40" width="40"</a>
+            <a href="#subscribe-section">EXIT</a>
+        </nav>
+
+       
+     
+    </section>
+    
+    <div class="container">
+        <section id="home-section">
+            <div class="row">
+             <div class="col-md-3" style="margin-left:70%; ">
+            <img src="./hand.png" height="100" width="150">
+            </div>
+           <div class="col-md-3">
+		<aside class="note-wrap note-yellow" style="height=100 width=150;">
+			<p> Score: </p>
+		</aside>
+		
+		
+	</div>                 
+	
+	   
+	   <div class="col-md-6" style="padding-top:10%;" >
+                                    <h2 id="question"> <font face="calibri" >What does "div" tag do? </h2>
+                                    <div class="col-md-6">
+                                    <h3 id="a"> <font face="verdana" > A.timepass</h3></div>
+                                    <div class="col-md-6">
+                                    <h3 id="b"> <font face="verdana" >B. whaaaat nonsense</h3></div>
+                                    <div class="col-md-6">
+                                    <h3 id="c"> <font face="sans-serif" >C. Dont bug?</h3></div>
+                                    <div class="col-md-6">
+                                    <h3 id="d"> D. why you ask me?</h3></div>
+                                 </div>
+                
+        </section>
+       
+    </div>
+   
+    
+</body>
+
+</html>
